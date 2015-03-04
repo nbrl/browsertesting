@@ -5,5 +5,8 @@
   "scripts": {
     "test": "mocha test.js"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^2.1.0"
+  }
 }
