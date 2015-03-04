@@ -1,0 +1,9 @@
+{
+  "name": "browsertests",
+  "version": "0.0.1",
+  "main": "sdk.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "license": "MIT"
+}
