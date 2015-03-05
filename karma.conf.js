@@ -1,12 +1,7 @@
 // Karma configuration
-// Generated on Thu Mar 05 2015 11:02:25 GMT+0000 (GMT)
-
-module.exports = function(config) {
-
-  if (!process.env.SAUCE_USERNAME || !process.env.SAUCE_ACCESS_KEY) {
-    console.log('Need to set SAUCE_USERNAME and SAUCE_ACCESS_KEY');
-    process.exit(1);
-  }
+// Originally generated on Thu Mar 05 2015 11:02:25 GMT+0000 (GMT)
+// Will run against SauceLabs browsers from Travis CI, or against PhantomJS when
+// run locally :)
 
   var customLaunchers = {
     'SL_Chrome': {
@@ -16,6 +11,22 @@ module.exports = function(config) {
       version: '35'
     }
   };
+module.exports = function(config) {
+
+  if (!process.env.SAUCE_USERNAME || !process.env.SAUCE_ACCESS_KEY) {
+    console.log('Need to set SAUCE_USERNAME and SAUCE_ACCESS_KEY');
+    process.exit(1);
+  }
+
+  // Define SauceLabs browser matrix here
+  //var customLaunchers = {
+    //'SL_Chrome': {
+      //base: 'SauceLabs',
+      //browserName: 'chrome',
+      //platform: 'Windows 7',
+      //version: '35'
+    //}
+  //};
 
   var conf = {
     // base path that will be used to resolve all patterns (eg. files, exclude)
