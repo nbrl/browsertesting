@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "main": "sdk.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha ./test/*.js"
+    "test-old": "./node_modules/mocha/bin/mocha ./test/*.js",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js --log-level debug --single-run"
   },
   "license": "MIT",
   "devDependencies": {
