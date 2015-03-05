@@ -3,14 +3,14 @@
 // Will run against SauceLabs browsers from Travis CI, or against PhantomJS when
 // run locally :)
 
-  var customLaunchers = {
-    'SL_Chrome': {
-      base: 'SauceLabs',
-      browserName: 'chrome',
-      platform: 'Windows 7',
-      version: '35'
-    }
-  };
+var browsers = [
+  {
+    name: 'chrome',
+    versions: ['34', '35'],
+    platforms: ['Windows 7']
+  }
+];
+
 module.exports = function(config) {
 
   if (!process.env.SAUCE_USERNAME || !process.env.SAUCE_ACCESS_KEY) {
@@ -19,14 +19,14 @@ module.exports = function(config) {
   }
 
   // Define SauceLabs browser matrix here
-  //var customLaunchers = {
-    //'SL_Chrome': {
-      //base: 'SauceLabs',
-      //browserName: 'chrome',
-      //platform: 'Windows 7',
-      //version: '35'
-    //}
-  //};
+  var customLaunchers = {
+    'SL_Chrome': {
+      base: 'SauceLabs',
+      browserName: 'chrome',
+      platform: 'Windows 7',
+      version: '35'
+    }
+  };
 
   var conf = {
     // base path that will be used to resolve all patterns (eg. files, exclude)
