@@ -4,7 +4,7 @@
   "main": "sdk.js",
   "scripts": {
     "test-old": "./node_modules/mocha/bin/mocha ./test/*.js",
-    "test": "./node_modules/karma/bin/karma start karma.conf.js --log-level debug --single-run"
+    "test": "./node_modules/karma/bin/karma start karma.conf.js"
   },
   "license": "MIT",
   "devDependencies": {
