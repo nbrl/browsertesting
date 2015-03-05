@@ -17,7 +17,7 @@ module.exports = function(config) {
     }
   };
 
-  config.set({
+  var conf = {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
@@ -48,7 +48,7 @@ module.exports = function(config) {
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     //reporters: ['progress'],
     //reporters: ['spec'],
-    reporters: ['progress', 'saucelabs'],
+    reporters: ['spec', 'saucelabs'],
 
     // web server port
     port: 9876,
@@ -69,10 +69,20 @@ module.exports = function(config) {
       }
     },
 
-    // Increase timeout in case CI connection is slow
-    captureTimeout: 120000,
-    customLaunchers: customLaunchers,
-    browsers: Object.keys(customLaunchers),
+    // FIXME
+    //if (process.env.OSTYPE.match(/^darwin[0-9.]+/)) {
+      //// local
+      //browsers: ['PhantomJS'],
+    //} else {
+      //// Assume sauce labs
+      //// Increase timeout in case CI connection is slow
+      //captureTimeout: 120000,
+      //customLaunchers: customLaunchers,
+      //browsers: Object.keys(customLaunchers),
+    //}
+    //captureTimeout: 120000,
+    //customLaunchers: customLaunchers,
+    //browsers: Object.keys(customLaunchers),
 
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: false,
@@ -85,5 +95,17 @@ module.exports = function(config) {
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: true
-  });
+  };
+
+
+  // FIXME!
+  if (process.env.ORCHESTRATION_HOME) {
+    conf.browsers = ['PhantomJS'];
+  } else {
+    conf.captureTimeout = 120000;
+    conf.customLaunchers = customLaunchers;
+    conf.browsers = Object.keys(customLaunchers);
+  }
+
+  config.set(conf);
 };
