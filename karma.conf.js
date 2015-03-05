@@ -2,7 +2,22 @@
 // Generated on Thu Mar 05 2015 11:02:25 GMT+0000 (GMT)
 
 module.exports = function(config) {
+
+  var customLaunchers = {
+    sl_chrome: {
+      base: 'SauceLabs',
+      browserName: 'chrome',
+      platform: 'Windows 7',
+      version: '35'
+    }
+  };
+
   config.set({
+    sauceLabs: {
+      testName: 'Browser testing testing'
+    },
+    customLaunchers: customLaunchers,
+    browsers: Object.keys(customLaunchers),
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -61,7 +76,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS', 'Chrome'],
+    //browsers: ['PhantomJS', 'Chrome'],
     //browsers: ['PhantomJS'],
 
 
