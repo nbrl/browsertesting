@@ -84,7 +84,7 @@ module.exports = function(config) {
     conf.customLaunchers = browsers;
 
     conf.sauceLabs = {
-      testName: 'advocate-things-js-sdk with Karma',
+      testName: 'Browser testing - new conf',
       recordScreenshots: false,
       connectoOptions: {
         port: 5757,
