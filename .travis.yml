@@ -1,9 +1,9 @@
 language: node_js
 node_js:
-  - 0.10.35
-env:
-  global:
-    - secure: bfYw0AskWHZiPRCbf2KVg48WwBWv6O8AhUX4mLF/PyR4IHXZEMay+Dl+zWBqjiRI4zYAWDv1sBsA1+KvXaldHw30ALBdPBZNr5x9A4b/CIUvIQywK03v0mBNOZzmNaK4bQM0cyEkoJY1Lx+PFshMw9j/rxeO9rQXpeHekIq0t3s=
-    - secure: EwDYm1Shpm+NbykLk2878w2+ntQqZORv5JRfyzlBoS6zNFCLsuVdP2LrvPC7jV7oJRv9BXZy+1fmtwVk/bh8fjwNZlKKJZQM9LfXptjrakPCoTduj3dJRa7gMPgiy8eqTdZAsPdwsTPzXsoOEYqt7Pvsh6jmgBT9NLkpqOKMNW4=
+- 0.10.35
 addons:
   sauce_connect: true
+env:
+  global:
+  - secure: T6fZ1VNfJhXMAngiN3C4xDtF8u4FILEbBtUrxS064n2/L73hD2lclnMnT0yrFtD/RLJkYf0dyHG1fV7UOH8RbuWfG2rIHHCOiV1FBJzesG+dLkfzQemPpf3zqf5Vl3KLOStygNpp6h6lDNOwn3swwvO/pNjtibVaG/q4SytnkX8=
+  - secure: XgcEY4vmISAsVBaMgVxIsiFxMMFCs2XvyX77AY8dnA+CFtExktNxfRCjIxN/Vv61r9lTUVdK7WCGsJ9stwOCrAr97r2iXJGU3tMfM2s11XnQ3Gvgbt7ocY5xZW6ZVl4eHM/e9KvVUe3iWGOfemp2DKSHlsxWUjhbC50jrZtItKY=
